@@ -1,8 +1,8 @@
 hr {
-    width: 100%;
-    margin-left:0px;
-    border-top: 3px solid #000000;
-  }
+  width: 100%;
+  margin-left: 0px;
+  border-top: 3px solid #000000;
+}
 .line1 {
   font-family: "Source Code Pro", monospace;
   color: rgb(0, 0, 0);
@@ -14,103 +14,107 @@ hr {
   color: rgb(0, 0, 0);
   font-size: 68px;
   font-weight: 200;
-
 }
 .line3 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 200;
-    font-style: italic;
-  
-  }
-  .line4 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 300;
-    font-style: light;
-  
-  }
-  .line5 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 300;
-    font-style: italic;
-  
-  }
-  .line6 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 400;
-  
-  }
-  .line7 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 400;
-    font-style: italic;
-  
-  }
-
-  .line8 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 500;
-  
-  }
-  .line9 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 500;
-    font-style: italic;
-  
-  }
-  .line10 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 600;
-  
-  }
-  .line11 {
-    font-family: "Source Code Pro", monospace;
-    color: rgb(0, 0, 0);
-    font-size: 68px;
-    font-weight: 600;
-    font-style: italic;}
-  
-    h1 {
-        font-family: "Source Code Pro", monospace;
-        font-size: 90px;
-        text-align: center;
-       margin-top: 0ch;
-    }
-    h2 {
-        font-family: "Source Code Pro", monospace;
-        font-size: 60px;
-        text-align: center;
-       margin-top: 0ch;
-       line-height: 10%;
-       font-style: italic;
-
-    }
-    h3 {
-        font-family: "Source Code Pro", monospace;
-        font-size: 100px;
-        text-align: center;
-        line-height: 10%;
-    }
-span {
-    font-family: "Source Code Pro", monospace;
-    font-size: 90px;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 200;
+  font-style: italic;
+}
+.line4 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 300;
+  font-style: light;
+}
+.line5 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 300;
+  font-style: italic;
+}
+.line6 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 400;
+}
+.line7 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 400;
+  font-style: italic;
 }
 
-div:hover, span:hover{
-    color: rgb(255, 20, 157);
-  }
+.line8 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 500;
+}
+.line9 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 500;
+  font-style: italic;
+}
+.line10 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 600;
+}
+.line11 {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(0, 0, 0);
+  font-size: 68px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+h1 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 90px;
+  text-align: center;
+  margin-top: 0ch;
+}
+h2 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 0ch;
+  line-height: 10%;
+  font-style: italic;
+}
+h3 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 100px;
+  text-align: center;
+  line-height: 10%;
+}
+
+h4 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 100px;
+  text-align: center;
+  line-height: 5%;
+}
+
+span {
+  font-family: "Source Code Pro", monospace;
+  font-size: 90px;
+}
+
+ul {
+  font-family: "Source Code Pro", monospace;
+  font-size: 40px;
+}
+div:hover,
+span:hover {
+  color: rgb(255, 20, 157);
+}
