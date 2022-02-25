@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon"
+            href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+            />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+            rel="stylesheet">
+        <title>Core 2: Interaction / Project 2</title>
+        <meta
+            name="description"
+            content="A repository for information on the Core 2
+            Interaction Lab course."
+            />
+        <meta name="author" content="Sophia Zuo" />
+    </head>
+
+    <style>
+     @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+
+html, body {
+  font-family:'Roboto Mono', monospace;
+  background:#f15454;
+  height:100%;}
+
+.container
+  {height:100%;
+  width:90%;
+  justify-content:center;
+  align-items:center;
+  display:flex}
+
+.text {
+  margin-top: 200px;
+  font-weight:100;
+  font-size:70px;
+  color:#ffffff}
+
+.text:hover {
+    color:#fab7b7d7;
+}
+
+
+.dud {
+  color:#ffdada}
+
+  div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  font-family: gideon roman;
+  top: 0;
+  color:rgb(236, 11, 11);
+  padding: 20px;
+  font-size: 40px;
+  background-color:rgb(255, 255, 255);
+  text-align: center;
+  opacity: 70%;
+}
+a:link {
+  text-decoration: none;}
+  
+    </style>
+
+    <body>
+        <div class="sticky">Hover and click on the text</div>
+        <center><div class="container">
+                <a href=''> <div class="text"></div></a></center>
+        </div>
+        <script>
+
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+
+const phrases = [
+  'I’m in my mid-30s now and my periods have always been',
+  'a physical and mental slog.',
+  'It is thought that 90% of women experience',
+  'some premenstrual changes,',
+  'even if mildly.',
+  'There are more than 150 clinically identified symptoms of PMS,',
+  'including irritability,',
+  'anxiety,',
+  'depression,',
+  'and headaches.',
+  'A laugh riot, in other words.',
+]
+
+const el = document.querySelector('.text')
+const fx = new TextScramble(el)
+
+let counter = 0
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 2000)
+  })
+  counter = (counter + 1) % phrases.length
+}
+
+next()
+</script>
+    </body>

@@ -1,0 +1,160 @@
+@media screen and (width: 600px) {
+    body {
+        background-color: red;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    background-color: #ffffff;
+    padding: 0px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Source Code Pro", monospace ;
+  }
+
+hr {
+    width: 100%;
+    margin-left: 0px;
+    border-top: 3px solid #000000;
+  }
+  .line1 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+  }
+  
+  .line2 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 200;
+  }
+  .line3 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 200;
+    font-style: italic;
+  }
+  .line4 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 300;
+    font-style: light;
+  }
+  .line5 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .line6 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 400;
+  }
+  .line7 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .line8 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 500;
+  }
+  .line9 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .line10 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 600;
+  }
+  .line11 {
+    font-family: "Source Code Pro", monospace;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  h1 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 0ch;
+    position:sticky;
+  }
+  h2 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 0ch;
+    line-height: 10%;
+    font-style: italic;
+  }
+  h3 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 100px;
+    text-align: center;
+    line-height: 10%;
+  }
+  
+  h4 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 100px;
+    text-align: center;
+    line-height: 5%;
+  }
+
+  
+  ul {
+    font-family: "Source Code Pro", monospace;
+    font-size: 40px;
+  }
+
+  div:hover {
+    color: rgb(255, 20, 157);
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    body {
+      background-color: rgb(205, 230, 173);
+    }
+
+    .grid-item {
+        background-color: rgb(186, 252, 149);
+    }
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(211, 239, 241);
+    }
+
+    .grid-item {
+        background-color: rgb(119, 223, 255);
+    }
+  }

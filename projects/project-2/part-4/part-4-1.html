@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+
+  <html lang="en">
+      <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon"
+              href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+              />
+          <title>Core 2: Interaction / Project 2</title>
+          <meta
+              name="description"
+              content="A repository for information on the Core 2
+              Interaction Lab course."
+              />
+          <meta name="author" content="Sophia Zuo" />
+      </head>
+  
+      <style>
+          body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anonymous Pro", "Monospace";
+    font-size: 80px;
+    background-color:rgb(252, 7, 60);
+    animation-name: change;
+    animation-duration: 5s;
+    
+  }
+  
+
+  
+  #circular-text {
+    position: relative;
+    background: #fff;
+    color: rgb(226, 26, 26);
+    border-radius: 100%;
+    padding: 20px;
+    background-color: rgb(255, 253, 253);
+    font-family: Lusitana;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 20s linear infinite;
+  }
+  
+  #circular-text:hover {
+      background-color:rgb(255, 221, 221)
+  }
+  
+  #circular-text span {
+    position: absolute;
+    transform-origin: top left;
+  }
+  @-moz-keyframes spin { 
+      100% { -moz-transform: rotate(360deg); } 
+  }
+  @-webkit-keyframes spin { 
+      100% { -webkit-transform: rotate(360deg); } 
+  }
+  @keyframes spin { 
+      100% { 
+          -webkit-transform: rotate(360deg); 
+          transform:rotate(360deg); 
+      } 
+  }
+  
+      </style>
+  
+      <body>
+          <a href="./part-4-2.html"><div id='circular-text'>Going-With-the-Flow-
+              
+              </div></a>
+          
+          <script>
+              const degreeToRadian = (angle) => {
+    return angle * (Math.PI / 180);
+  };
+  
+  const radius = 300;
+  const diameter = radius * 2;
+  
+  const circle = document.querySelector("#circular-text");
+  circle.style.width = `${diameter}px`;
+  circle.style.height = `${diameter}px`;
+  
+  const text = circle.innerText;
+  const characters = text.split("");
+  circle.innerText = null;
+  
+  const startAngle = -90;
+  const endAngle = 270;
+  const angleRange = endAngle - startAngle;
+  
+  const deltaAngle = angleRange / characters.length;
+  let currentAngle = startAngle;
+  
+  characters.forEach((char, index) => {
+    const charElement = document.createElement("span");
+    charElement.innerText = char;
+    const xPos = radius * (1 + Math.cos(degreeToRadian(currentAngle)));
+    const yPos = radius * (1 + Math.sin(degreeToRadian(currentAngle)));
+  
+    const transform = `translate(${xPos}px, ${yPos}px)`;
+    const rotate = `rotate(${index * deltaAngle}deg)`;
+    charElement.style.transform = `${transform} ${rotate}`;
+  
+    currentAngle += deltaAngle;
+    circle.appendChild(charElement);
+  });
+  
+          </script>
+      </body>
+  

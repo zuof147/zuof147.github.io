@@ -23,54 +23,65 @@
 
     <style>
         body {
-           background-color:  rgb(255, 240, 240);
+           background-color:  rgb(255, 234, 239);
         }
 input {
    border:none;
    font-size: 50px;
   font-family: 'Noto Serif Display', serif;
-  background-color:  rgb(255, 240, 240);
+  background-color:  rgb(255, 234, 239);
 }
 
 input:focus {
    outline:none;
-   color:aqua;
-   color: rgb(201, 34, 34);
+   color: rgb(255, 138, 138);
 }
 
 label {
     font-size: 80px;
     font-family: 'Noto Serif Display', serif;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 138, 138);
     
 }
 
 p {
     font-size: 80px;
     font-family: 'Noto Serif Display', serif;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 138, 138);
     line-height: 0px;
     font-style:italic
 }
 
 p:hover{
     font-size: 120px;
-    color:rgb(201, 34, 34);
+    color:rgb(238, 48, 48);
 }
 
 a:link {
   text-decoration: none;}
 
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  font-family: gideon roman ;
+  top: 0;
+  color:rgb(255, 255, 255);
+  padding: 20px;
+  font-size: 40px;
+  background-color: rgb(252, 145, 163);
+  text-align: center;
+  opacity: 60%;
+}
 </style>
 
     <body style="font-family:sans-serif"> <center>
+        <div class="sticky">Hover on "secret"</div>
             <br>
             <br>
-            <br>
-            <br>
+    
 
             <label for="text">How much have you kept</label>
-            <a href="./part-3.html"><p>secret?</p></a>
+            <a href="http://127.0.0.1:5500/projects/project-2/part-4/part-4-3.html"><p>secret?</p></a>
             <br>
 
             <input type="text" placeholder="Type in your answer......">
