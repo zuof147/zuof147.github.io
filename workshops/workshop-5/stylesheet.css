@@ -111,21 +111,21 @@ hr {
     font-size: 60px;
     text-align: center;
     margin-top: 0ch;
-    line-height: 10%;
+    
     font-style: italic;
   }
   h3 {
     font-family: "Source Code Pro", monospace;
     font-size: 100px;
     text-align: center;
-    line-height: 10%;
+    
   }
   
   h4 {
     font-family: "Source Code Pro", monospace;
     font-size: 100px;
     text-align: center;
-    line-height: 5%;
+ 
   }
 
   
@@ -141,17 +141,24 @@ hr {
   @media only screen and (max-width: 1000px) {
     body {
       background-color: rgb(205, 230, 173);
+      margin:0em;
+      font-size:5px;
     }
-
+  
     .grid-item {
         background-color: rgb(186, 252, 149);
     }
+  .container {
+      width:10px;
   }
+}
 
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (min-width: 768px) {
     body {
       background-color: rgb(211, 239, 241);
+      margin:7em;
+      font-size:10px;
     }
 
     .grid-item {
