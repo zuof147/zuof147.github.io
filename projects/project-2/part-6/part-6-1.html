@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon"
+            href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+            />
+
+        <title>Core 2: Interaction / Project 1</title>
+        <meta
+            name="description"
+            content="A repository for information on the Core 2
+            Interaction Lab course."
+            />
+        <meta name="author" content="Sophia Zuo" />
+        <script>
+            var tl = new TimelineMax({repeat: -1, yoyo: true, repeatDelay: 1});
+            tl.to('.slide', 0.5, {scale: 1, transformOrigin: '50% 0%', borderRadius: '100%'});
+            tl.to('.slide', 0.25, {borderRadius: '0%'}, '-=0.15');
+              </script>
+    </head>
+
+    <style>
+        body{
+  background-color: #CB9805;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.slide{
+  display: block;
+  position: relative;
+  height: 200vh;
+  width: 200vw;
+  top: -100vh;
+  background-color: #C80000; 
+  border-radius: 0%;
+  transform: scale(0)
+}
+
+    </style>
+
+
+
+    <body>
+        <div id="container">
+            <div class="slide one"></div>
+        </div>
+
+
+    </body>

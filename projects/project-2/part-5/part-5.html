@@ -22,6 +22,48 @@
     </head>
 
     <style>
+      dfn {
+  background: rgba(255, 160, 160, 0.2);
+  border-bottom: dashed 1px rgba(236, 61, 61, 0.8);
+  padding: 0 0.4em;
+  cursor: help;
+  font-style: normal;
+  position: relative;
+  
+}
+dfn::after {
+  content: attr(data-info);
+  display: inline;
+  position: absolute;
+  top: 22px; left: 0;
+  opacity: 0;
+  width: 230px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 0.5em 0.8em;
+  background: rgba(255, 192, 192, 0.8);
+  color: #fff;
+  pointer-events: none; 
+  transition: opacity 250ms, top 250ms;
+}
+dfn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px; left: 20px;
+  opacity: 0;
+  width: 0; height: 0;
+  border: solid transparent 5px;
+  border-bottom-color: rgba(0,0,0,0.8);
+  transition: opacity 250ms, top 250ms;
+}
+dfn:hover {z-index: 2;} 
+dfn:hover::after,
+dfn:hover::before {opacity: 1;}
+dfn:hover::after {top: 30px;}
+dfn:hover::before {top: 20px;}
+
 * {
     padding: 0;
     margin: 0;
@@ -41,7 +83,7 @@
     --color-1: #f00f0f;
     --color-2: #292c33;
     --color-3: rgb(39, 40, 42);
-    --color-4: rgb(252, 191, 189);
+    --color-4: rgb(248, 174, 174);
   }
   
   section {
@@ -188,7 +230,11 @@ color:#f8063a
     background-color: rgb(25, 26, 37);
     border: 2px solid whitesmoke;
   }
-
+ a:link {
+  color:rgb(255, 124, 124);
+   text-decoration: none;
+   
+ }
 
   </style>
 
@@ -199,7 +245,8 @@ color:#f8063a
                     <h2>Eleanor Morgan</h2></center>
                 <br>
                 <div class="p1">
-                        <p>
+                  <p>
+                        
                             In the rush-hour train one evening last summer, I
                             looked
                             around at all the women
@@ -212,10 +259,11 @@ color:#f8063a
                             standing stoically by the doors. I realised every
                             one of
                             them will have some
-                            story about how their reproductive systems have
+                            story about how their  <a href="./part-5-2.html"><dfn data-info="Every woman">reproductive systems</dfn></a>have
                             affected
                             their lives. And I
-                            thought: how much have you kept secret?
+                            thought: <a href="./part-5-3.html"><dfn data-info="Is it really shameful?">how much have you kept secret?</dfn>
+                            </a>
                         </p>
                     </div>
                     <div class="p2">
@@ -238,8 +286,8 @@ color:#f8063a
                     sun-roasted kelp and old deep-fat-fryer oil, took the nausea
                     that came with
                     these sharp churns to another level. I had to sit down on
-                    the grass. The pain
-                    spoke to me. It told me my human fabric had changed. As
+                    the grass.  <a href="./part-5-5.html"><dfn data-info="Bleeding">The pain
+                    spoke to me.</dnf></a> It told me my human fabric had changed. As
                     evidence of the encoding
                     that happened, now when I hear seagulls, I still have flash
                     visions of lying
@@ -255,8 +303,8 @@ color:#f8063a
                     premenstrual changes, even
                     if mildly. There are more than 150 clinically identified
                     symptoms of PMS,
-                    including irritability, anxiety, depression and headaches. A
-                    laugh riot, in
+                    including irritability, anxiety, depression and headaches.  <a href="./part-5-4.html"><dfn data-info="ruin everything">A
+                    laugh riot</dfn></a>, in
                     other words.
                 </p>
                 </div>
@@ -632,7 +680,7 @@ color:#f8063a
                     truth.
                 </p>
                 </div>
-                <button>Back to the Top</button>
+                <center><button onclick="topFunction()" title="Go to top">Back to the Top</button></center>
             </div>
         </section>
         <div class="theme-switcher">
@@ -641,6 +689,10 @@ color:#f8063a
         </div>
 
         <script>
+          function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
     const input = document.querySelector(".theme-switcher input");
 
 input.addEventListener("change", (e) => {
