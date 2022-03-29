@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon"
+            href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+            />
+        <title>Core 2: Interaction / Workshop 4</title>
+        <meta
+            name="description"
+            content="A repository for information on the Core 2
+            Interaction Lab course."
+            />
+        <meta name="author" content="Sophia Zuo" />
+        <link rel="stylesheet" type="text/css" href="./movie-poster.css">
+    </head>
+
+    <style>
+        body 
+        {
+            background-color: rgb(255, 217, 136);
+            color:white;
+            font-size:100px;
+            text-align: center;
+            margin-top: 280px;
+            font-family: asul;
+        }
+    </style>
+    <body>
+
+        <div id="clock" onload="currentTime()"></div>
+
+        <script>
+  function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "AM";
+
+  if(hh === 0){
+      hh = 12;
+  }
+  if(hh > 12){
+      hh = hh - 12;
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time; 
+  let t = setTimeout(function(){ currentTime() }, 1000);
+}
+
+currentTime();
+</script>
+    </body>

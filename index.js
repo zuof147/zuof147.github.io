@@ -109,3 +109,6 @@ for(let index=0; index < people.length; index = index + 1) {
     console.log("Username" + people[index].name)
 }
 
+
+const names = document.querySelectorAll("class")
+
