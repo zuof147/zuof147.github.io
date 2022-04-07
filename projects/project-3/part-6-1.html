@@ -5,29 +5,25 @@
 <script type="text/javascript">
 function changeIt(objName)
 {
-	//The image object accessed through its id we mentioned in the DIV block which is going to be visible currently
+	
 	var obj = document.getElementById(objName);
 	
-	//An array that hold the IDs of images that we mentioned in their DIV blocks
+
 	var objId = new Array();
 	
-	//Storing the image IDs into the array starts here
+
 	objId[0] = "image1";
 	objId[1] = "image2";
 	objId[2] = "image3";
 	objId[3] = "image4";
 	objId[4] = "image5";
-	//Storing the image IDs into the array ends here
 	
-	//A counter variable going to use for iteration
 	var i;
 	
-	//A variable that can hold all the other object references other than the object which is going to be visible
+	
 	var tempObj;
 	
-	//The following loop does the display of a single image based on its ID. The image whose ID we passed into this function will be the
-	//only image that is displayed rest of the images will be hidden based on their IDs and that part has been handled by the else part
-	//of the if statement within this loop.
+	
 	for(i=0;i<objId.length;i++)
 	{
 		if(objName == objId[i])
