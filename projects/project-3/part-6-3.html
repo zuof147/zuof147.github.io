@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>draft3</title>
+    <style>
+body {
+    margin:0;
+}
+        
+      .gallerypic {
+        width: 1000px;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        overflow:hidden;
+
+        
+        float: left;
+      }
+      .gallerypic span.zoom-icon {
+        visibility: hidden;
+        position: absolute;
+        right: 40px;
+        bottom: 100px;
+        
+      }
+      a.gallerypic:hover span.zoom-icon {
+        visibility: visible;
+      }
+      .pic {
+          width:100%;
+          height:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="gallerypic">
+      <img src="2.jpeg" alt="Gallery Photo" class="pic" />
+      <span class="zoom-icon">
+        <img src="1.jpeg" width="500" height="" alt="Zoom">
+      </span>
+    </a>
+  </body>
+</html>

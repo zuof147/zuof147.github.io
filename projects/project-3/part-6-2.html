@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style type="text/css">
+	html,body{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+}
+img{
+    min-height:100%;
+    min-width:100%;
+    height:auto;
+    width:auto;
+    position:absolute;
+    top:-100%; bottom:-100%;
+    left:-100%; right:-100%;
+    margin:auto;
+}
+</style>
+</head>
+<body>
+	<div>
+		
+        <img src="1.jpeg" onmouseover="imagefun()" id="getImage">
+    	
+    </div>
+    <script>
+        function imagefun() {
+            var Image_Id = document.getElementById('getImage');
+            if (Image_Id.src.match("1.jpeg")) {
+                Image_Id.src = "2.jpeg";
+                
+            }
+
+            if (Image_Id.src.match("2.jpeg")) {
+                Image_Id.src = "3.jpeg";
+                
+            }
+
+            if (Image_Id.src.match("3.jpeg")) {
+                Image_Id.src = "4.jpeg";
+                
+            }
+
+            else {
+                Image_Id.src = "1.jpeg";
+            }
+        }        
+    </script>
+
+</body>
+</html>
