@@ -1,6 +1,6 @@
 //step 1: variables
 
-const airtableApiKey = "keyXXSSfyELtHPQGh";
+const airtableApiKey = "keyyxePBzfNtzN44z";
 
 const airtableDatabaseUrl = "https://api.airtable.com/v0/appMWjywG2bNbWw0X/collection";
 
