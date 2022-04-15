@@ -1,9 +1,21 @@
 img {
-  width: 600px;
+  width: 340px;
   display: block;
   margin:20px;
 }
 
+img:hover  {
+  opacity: 0.4;
+  transition: .5s ease;}
+
+  
+
 body {
-    background-color:rgb(236, 230, 141);
+  background-image: url("./assets/relationship/nq9hFEZo.png");
+  background-attachment: fixed;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
 }
