@@ -1,119 +1,76 @@
 // STEP 1: VARIABLES
-const users = [{
-    name: "Kayne Laing", 
-    authenticated: true,
-    credit: 1043
-}, {
-    name: "Percy Hurley", 
-    authenticated: true,
-    credit: -123
-}, {
-    name: "Bethany Benton", 
-    authenticated: false,
-    credit: 145
-}, 
-{
-    name: "Hailie Rooney", 
-    authenticated: false,
-    credit: 14
+const weapons =
+[{
+    name: "Ruins Greatsword", 
+    description: "Originally rubble from a ruin which fell from the sky, this surviving fragment was honed into a weapon.",
+    attack: 124
 },
 {
-    name: "Lowri Currie", 
-    authenticated: true,
-    credit: 93723
+    name: "Eclipse Shotel", 
+    description: "Storied sword and treasure of Castle Sol that depicts an eclipsed sun drained of color.",
+    attack: 77, 
+},
+{
+    name: "Grafted Blade Greatsword", 
+    description: "Storied sword and treasure of Castle Sol that depicts an eclipsed sun drained of color.",
+    attack: 157, 
 },]
 
 // STEP 2: DOM REFERENCES
-const usersContainerElement = document.querySelector('#users')
-const showUsersWithCreditInDollarsButtonElement = document.querySelector("button#map")
-const showAuthenticatedUsersButtonElement = document.querySelector('button#authenticated')
-const showUsersSortedByNameAscendingButtonElement = document.querySelector('button#sort-ascending')
-const showUsersSortedByNameDescendingButtonElement = document.querySelector('button#sort-descending')
+const weaponsContainerElement = document.querySelector('#weapons')
+const showWeaponsSortedByAttackAscendingButtonElement = document.querySelector('button#sort-ascending')
+const showWeaponsSortedByAttackDescendingButtonElement = document.querySelector('button#sort-descending')
 
 // STEP 3: FUNCTIONS
-const createUserElement = (user) => {
+const createWeaponElement = (weapon) => {
     // Create Container Element
     const containerElement = document.createElement('div')
-    containerElement.classList.add('user')
-    // Create Name Element
-    const nameElement = document.createElement('p')
-    nameElement.innerHTML = 'Name: ' + user.name
-    // Create Authenticated Element
-    const authenticatedElement = document.createElement('p')
-    authenticatedElement.innerHTML = 'Authenticated: ' + user.authenticated
-    // Create Credit Element
-    const creditElement = document.createElement('p')
-    creditElement.innerHTML = 'Credit:' + user.credit
-    containerElement.appendChild(nameElement)
-    containerElement.appendChild(authenticatedElement)
-    containerElement.appendChild(creditElement)
+    containerElement.classList.add('weapon')
+    // Create Attack Value Element
+    const attackElement = document.createElement('p')
+    creditElement.innerHTML = 'Attack:' + weapon.attack
+    containerElement.appendChild(attackElement)
     return containerElement
 }
 
-const removeUsers = () => {
-    usersContainerElement.innerHTML = ""
+const removeWeapons = () => {
+    weaponsContainerElement.innerHTML = ""
 }
 
-const addUsers = (users) => {
-    users.forEach(user => {
-        const userElement = createUserElement(user)
-        usersContainerElement.appendChild(userElement)
+const addWeapons = (weapons) => {
+    weapons.forEach(weapon => {
+        const weaponElement = createUserElement(weapon)
+        weaponsContainerElement.appendChild(weaponElement)
     });
 }
 
 // STEP 4: APPLICATION
-// MAP
-const usersWithCreditInDollars = users.map((user) => {
-    const userWithCreditInDollars = {
-        name: user.name, 
-        credit: user.credit, 
-        authenticated: user.authenticated
-    }
-    const creditInDollars = userWithCreditInDollars.credit / 100 
-    userWithCreditInDollars.credit = '$' + creditInDollars
-    return userWithCreditInDollars
-})
-
-// FILTER
-const authenticatedUsers = users.filter((user) => {
-    return user.authenticated
-})
-
 // SORT 
-const usersSortedByNameAscending = users.sort((userA, userB) => {
-    if (userA.name < userB.name) {
+const weaponsSortedByAttackAscending = weapons.sort((weaponA, weaponB) => {
+    if (weaponA.attack < weaponB.attack) {
         return -1;
       }
-      if (userA.name > userB.name) {
+      if (weaponA.attack > weaponB. attack) {
         return 1;
       }
     
-      // names must be equal
+      // Attack must be equal
       return 0;
 })
 
-usersSortedByNameDescending = usersSortedByNameAscending.slice().reverse() 
+const copyOfWeaponsSortedByAttackAscending = weaponsSortedByAttackAscending.slice()
+const weaponsSortedByAttackDescending = copyOfWeaponsSortedByAttackAscending.reverse()
 
 // SET EVENT LISTENERS
-showUsersWithCreditInDollarsButtonElement.addEventListener('click', () => {
-    removeUsers()
-    addUsers(usersWithCreditInDollars)
+showWeaponsSortedByAttackAscendingButtonElement.addEventListener('click', () => {
+    removeWeapons()
+    addWeapons(weaponsSortedByAttackAscending)
 })
 
-showAuthenticatedUsersButtonElement.addEventListener('click', () => {
-    removeUsers()
-    addUsers(authenticatedUsers)
-})
-
-showUsersSortedByNameAscendingButtonElement.addEventListener('click', () => {
-    removeUsers()
-    addUsers(usersSortedByNameAscending)
-})
-
-showUsersSortedByNameDescendingButtonElement.addEventListener('click', () => {
-    removeUsers()
-    addUsers(usersSortedByNameDescending)
+showWeaponsSortedByAttackDescendingButtonElement.addEventListener('click', () => {
+    removeWeapons()
+    addWeapons(weaponsSortedByAttackDescending)
 })
 
 // START APP
-addUsers(users)
+addWeapons(weapons)

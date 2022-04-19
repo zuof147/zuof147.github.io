@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon"
+            href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+            />
+        <title>Core 2: Interaction Project 3</title>
+        <meta name="author" content="Sophia Zuo" />
+    </head>
+
+<style>
+html, body, #body {
+    height: 100%;
+    width: 100%;
+}
+
+#body.imageOne {
+    background-image: url("./assets/black&white/matt-weber-6.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#body.imageTwo {
+    background-image: url("./assets/black&white/Luc\ Kordas3.jpeg");
+}
+
+#body.imageThree {
+    background-image: url("./assets/black&white/Matt-Weber-2.jpeg");
+}
+</style>
+
+<body>
+    <div id="body" class="imageOne"></div>
+    <script>
+        var bodyObj, className, index;
+
+bodyObj = document.getElementById('body');
+index = 1;
+className = [
+    'imageOne',
+    'imageTwo',
+    'imageThree'
+];
+
+function updateIndex(){
+    if(index === 0){
+        index = 1;
+    }else{
+        index = 0;
+    }
+}
+
+bodyObj.onclick = function(e){
+    e.currentTarget.className = className[index];
+    updateIndex();
+}
+
+    </script>
+</body>

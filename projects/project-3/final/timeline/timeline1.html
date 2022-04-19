@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+</head>
+<style>
+    html,
+body {
+  margin: 0;
+}
+
+
+main {
+  overflow-x: hidden;
+  display: flex;
+}
+
+img{
+    width:300px;
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+    text-decoration: none;
+    color:inherit;
+}
+
+
+ a:visited 
+{
+    text-decoration: none; 
+    color:inherit;
+}
+
+section {
+  min-width: 25vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8ch;
+  font-family: playfair display;
+    font-style: italic;
+}
+
+section:nth-child(even) {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+</style>
+<body>
+<main>
+    <section id="home"><a href="#1940">
+       <p>1940</p></a></section>
+      
+       <section><a href="#1950">
+        <p>1950</p></a></section>
+
+        <section><a href="#1960">
+            <p>1960</p></a></section>
+
+            <section><a href="#1970">
+                <p>1970</p></a></section>
+
+                <section><a href="#1980">
+                    <p>1980</p></a></section>
+
+                    <section><a href="#1990">
+                        <p>1990</p></a></section>
+
+<section></section>
+         <section><a href="#home">
+    <p>1940s</p></a></section>
+        <section>
+            <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+          </section>
+          <section>       
+            <img src="./assets /black&white/Luc Kordas.jpeg">
+          </section>
+          <section id="1940">
+              <img src="./assets /black&white/Matt-Weber-2.jpeg">
+          </section>
+            <section>
+              <img src="./assets /black&white/matt-weber-6.jpeg">
+          </section>
+          <section id="1940">
+              <img src="./assets /black&white/matt_weber-7.jpeg">
+          </section>
+
+
+          <section><a href="#home">
+        <p>1950s</p></a>
+    </section>
+
+    <section>
+        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+      </section>
+      <section>
+        <img src="./assets /black&white/Luc Kordas.jpeg">
+      </section>
+      <section id="1950">
+          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      </section>
+        <section>
+          <img src="./assets /black&white/matt-weber-6.jpeg">
+      </section>
+      <section>
+          <img src="./assets /black&white/matt_weber-7.jpeg">
+      </section>
+
+
+    <section><a href="#home">
+        <p>1960s</p></a>
+    </section>
+    <section>
+      
+        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+      </section>
+      <section>
+      
+        <img src="./assets /black&white/Luc Kordas.jpeg">
+      </section>
+      <section id="1960">
+      
+          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      </section>
+        <section>
+          <img src="./assets /black&white/matt-weber-6.jpeg">
+      </section>
+      <section>
+          <img src="./assets /black&white/matt_weber-7.jpeg">
+      </section>
+
+      <section><a href="#home">
+        <p>1970s</p></a>
+    </section>
+      <section>
+      
+        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+      </section>
+      <section>
+      
+        <img src="./assets /black&white/Luc Kordas.jpeg">
+      </section>
+      <section id="1970">
+      
+          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      </section>
+        <section>
+          <img src="./assets /black&white/matt-weber-6.jpeg">
+      </section>
+      <section>
+          <img src="./assets /black&white/matt_weber-7.jpeg">
+      </section>
+      <section><a href="#home">
+        <p>1980s</p></a>
+       
+      </section>
+      <section>
+      
+        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+      </section>
+      <section>
+      
+        <img src="./assets /black&white/Luc Kordas.jpeg">
+      </section>
+      <section id="1980">
+          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      </section>
+        <section>
+          <img src="./assets /black&white/matt-weber-6.jpeg">
+      </section>
+      <section>
+          <img src="./assets /black&white/matt_weber-7.jpeg">
+      </section>
+      <section><a href="#home">
+        <p>1990s</p></a>
+       
+      </section>
+      <section>
+      
+        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+      </section>
+      <section>
+      
+        <img src="./assets /black&white/Luc Kordas.jpeg">
+      </section>
+      <section id="1990">
+      
+          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      </section>
+        <section>
+          <img src="./assets /black&white/matt-weber-6.jpeg">
+      </section>
+      <section>
+          <img src="./assets /black&white/matt_weber-7.jpeg">
+      </section>
+      
+  </main>
+  <script>
+      const scrollContainer = document.querySelector("main");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});
+  </script>
+  </body>
+
+
+

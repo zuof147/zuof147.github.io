@@ -1,0 +1,27 @@
+img {
+  width: 340px;
+  display: block;
+  margin:100px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: all 1s ease;
+  
+}
+
+img:hover  {
+  opacity:0.5;
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 1s ease;
+  box-shadow: 0 0 0 5px #ffffff;}
+  
+  body {
+    background-color:rgb(240, 214, 68);
+    background-image: url("./assets/relationship/nq9hFEZo.png");
+    background-attachment: fixed;
+      background-size: 100% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+  }

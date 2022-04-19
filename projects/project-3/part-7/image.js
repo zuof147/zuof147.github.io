@@ -2,7 +2,7 @@
 
 const airtableApiKey = "keyyxePBzfNtzN44z";
 
-const airtableDatabaseUrl = "https://api.airtable.com/v0/appvzUAXVWzceqSLn/Table%201";
+const airtableDatabaseUrl = "https://api.airtable.com/v0/appvzUAXVWzceqSLn/yellow";
 
 const authenticatedUrl = airtableDatabaseUrl + "?api_key=" + airtableApiKey;
 
@@ -34,6 +34,18 @@ jsonPromise.then((data) => {
         
         //add container element to DOM
         illustrationContainerElement.appendChild(containerElement)
+
+        // IAN ADDED
+        console.log('testing')
+        imageElement.addEventListener('mouseover', (event) => {
+            console.log(event.target)
+            const source = event.target.src
+            console.log(source)
+            const bodyElement = document.querySelector('body')
+            bodyElement.style.backgroundImage = "url(" + source + ")"
+        })
+        // END IAN ADDED
+
         //add image element in containers
         containerElement.appendChild(imageElement)
         
