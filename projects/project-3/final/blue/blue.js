@@ -2,7 +2,7 @@
 
 const airtableApiKey = "keyyxePBzfNtzN44z";
 
-const airtableDatabaseUrl = "https://api.airtable.com/v0/appvzUAXVWzceqSLn/orange";
+const airtableDatabaseUrl = "https://api.airtable.com/v0/appvzUAXVWzceqSLn/blue";
 
 const authenticatedUrl = airtableDatabaseUrl + "?api_key=" + airtableApiKey;
 

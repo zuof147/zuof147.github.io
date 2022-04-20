@@ -5,6 +5,8 @@ img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   transition: all 1s ease;
+  box-shadow: 0 0 0 7px #ffffff;
+  overflow: hidden;
   
 }
 
@@ -15,13 +17,35 @@ img:hover  {
   -webkit-filter: grayscale(0%);
   filter: none;
   transition: 1s ease;
-  box-shadow: 0 0 0 5px #ffffff;}
+  box-shadow: none;
+  }
   
+
+  button {
+    position:fixed;
+    border-radius:30px;
+    border:solid black 1px;
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    height:40px;
+    font-family: questrial;
+    font-size:20px;
+    float:left;
+    overflow: hidden;
+    top: 10px;
+    left: 10px;
+    } 
+  
+    button:hover {
+      background-color:rgb(252, 225, 74);
+      transition: 1s ease;
+    }
+    
   body {
-    background-color:rgb(240, 214, 68);
+    background-color:rgb(252, 225, 74);
     background-image: url("./assets/relationship/nq9hFEZo.png");
     background-attachment: fixed;
-      background-size: 100% auto;
+      background-size: 89% auto;
       background-position: center;
       background-repeat: no-repeat;
   }

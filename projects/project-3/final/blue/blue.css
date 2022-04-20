@@ -37,12 +37,12 @@ img {
       } 
 
       button:hover {
-        background-color:rgb(240, 171, 68);
+        background-color:rgb(68, 137, 240);
         transition: 1s ease;
       }
   
   body {
-    background-color:rgb(240, 171, 68);
+    background-color:rgb(68, 137, 240);
     background-image: url("./assets/relationship/nq9hFEZo.png");
     background-attachment: fixed;
     background-size: 89% auto;
