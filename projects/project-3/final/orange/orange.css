@@ -11,17 +11,20 @@ img {
   }
   
   img:hover  {
-    opacity:0.5;
-    filter: grayscale(0%);
+    opacity:0.6;
     filter: gray;
     -webkit-filter: grayscale(0%);
-    filter: none;
     transition: 1s ease;
     box-shadow: none;
     }
     
+    img:hover {
+        filter: blur(3px) grayscale(0%);
+       
+      }
+    
   
-    button {
+    .home {
       position:fixed;
       border-radius:30px;
       border:solid black 1px;
@@ -36,16 +39,100 @@ img {
       left: 10px;
       } 
 
-      button:hover {
+      .home:hover {
         background-color:rgb(240, 171, 68);
-        transition: 1s ease;
+        transition: 0.5s ease;
+      }
+
+      .color1 {
+        position: fixed;
+        border-radius: 30px;
+        border: solid black 1px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        height: 40px;
+        font-family: questrial;
+        font-size: 20px;
+        float: left;
+        overflow: hidden;
+        top: 160px;
+        right: 10px;
+      }
+      
+      .color1:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        transition: 0.5s ease;
+      }
+      
+      .color2 {
+        position: fixed;
+        border-radius: 30px;
+        border: solid black 1px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        height: 40px;
+        font-family: questrial;
+        font-size: 20px;
+        float: left;
+        overflow: hidden;
+        top: 10px;
+        right: 10px;
+      }
+      
+      .color2:hover {
+        background-color:rgb(238, 219, 109);
+        color: rgb(0, 0, 0);
+        transition: 0.5s ease;
+      }
+      
+      .color3 {
+        position: fixed;
+        border-radius: 30px;
+        border: solid black 1px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        height: 40px;
+        font-family: questrial;
+        font-size: 20px;
+        float: left;
+        overflow: hidden;
+        top: 60px;
+        right: 10px;
+      }
+      
+      .color3:hover {
+        background-color: rgb(79, 122, 187);
+        color: rgb(0, 0, 0);
+        transition: 0.5s ease;
+      }
+      
+      .color4 {
+        position: fixed;
+        border-radius: 30px;
+        border: solid black 1px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        height: 40px;
+        font-family: questrial;
+        font-size: 20px;
+        float: left;
+        overflow: hidden;
+        top: 110px;
+        right: 10px;
+      }
+      
+      .color4:hover {
+        background-color: rgb(121, 170, 132);
+        color: rgb(0, 0, 0);
+        transition: 0.5s ease;
       }
   
   body {
     background-color:rgb(240, 171, 68);
     background-image: url("./assets/relationship/nq9hFEZo.png");
     background-attachment: fixed;
-    background-size: 89% auto;
+    background-size: 86% auto;
     background-position: center;
     background-repeat: no-repeat;
     margin:0px

@@ -14,9 +14,26 @@ main {
 }
 
 img{
-    width:300px;
+  width:300px;
   margin: 0;
   padding: 0;
+  filter: blur(3px) grayscale(1);
+  -webkit-filter: grayscale(100%);
+  transition: all 1s ease;
+}
+
+img:hover {
+  width:410px;
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+img:not(:hover) {
+  filter: blur(3px) grayscale(100%);
+  transition: all 1s ease;
 }
 
 a:link {
@@ -39,73 +56,74 @@ section {
   align-items: center;
   font-size: 8ch;
   font-family: playfair display;
-    font-style: italic;
+  font-style: italic;
 }
 
-section:nth-child(9) {
-  background-color: rgb(0, 0, 0);
-  color: white;
+.part1,.part2,.part3,.black{
+background-color: rgb(0, 0, 0);
+color:white;
 }
 
-section:nth-child(11) {
-  background-color: rgb(0, 0, 0);
-  color: white;
-}
-
-section:nth-child(13) {
-  background-color: rgb(0, 0, 0);
-  color: white;
-}
-
-section:nth-child(1) {
-  background-color: rgb(0, 0, 0);
-  color: white;
-}
-
-section:nth-child(3) {
-  background-color: rgb(0, 0, 0);
-  color: white;
-}
+.button {
+        position: fixed;
+        border-radius: 30px;
+        border: solid black 1px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        height: 40px;
+        font-family: questrial;
+        font-size: 20px;
+        float: left;
+        overflow: hidden;
+        top: 10px;
+        left: 10px;
+      }
 
 </style>
 <body>
 <main>
+    <form action="/projects/project-3/final/sortingpage.html">
+        <button type="submit" class="button">Back</button>
+     </form>
+
     <section id="home"><a href="#1940">
        <p>1940</p></a></section>
       
-       <section><a href="#1950">
+       <section class="black"><a href="#1950">
         <p>1950</p></a></section>
 
         <section><a href="#1960">
             <p>1960</p></a></section>
 
-            <section><a href="#1970">
+            <section class="black"><a href="#1970">
                 <p>1970</p></a></section>
 
                 <section><a href="#1980">
                     <p>1980</p></a></section>
 
-                    <section><a href="#1990">
+                    <section class="black"><a href="#1990">
                         <p>1990</p></a></section>
 
+
 <section></section>
-         <section><a href="#home">
+         <section class="part1"><a href="#home">
     <p>1940s</p></a></section>
-        <section>
-            <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+        <section class="part1">
+            <img src="./assets /timeline asset/1940/ Grand and Mulberry Streets 1943.jpg">
           </section>
-          <section>       
-            <img src="./assets /black&white/Luc Kordas.jpeg">
+          <section class="part1">       
+            <img src="./assets /timeline asset/1940/1940s.jpeg">
           </section>
-          <section id="1940">
-              <img src="./assets /black&white/Matt-Weber-2.jpeg">
+          <section id="1940" class="part1">
+              <img src="./assets /timeline asset/1940/lKeTwOeg.jpeg">
           </section>
-            <section>
-              <img src="./assets /black&white/matt-weber-6.jpeg">
+            <section class="part1">
+              <img src="./assets /timeline asset/1940/T7V1nAmE.jpeg">
           </section>
-          <section id="1940">
-              <img src="./assets /black&white/matt_weber-7.jpeg">
+          <section class="part1">
+              <img src="./assets /timeline asset/1940/XXFmNgLg.jpeg">
           </section>
+    
 
 
           <section><a href="#home">
@@ -113,110 +131,308 @@ section:nth-child(3) {
     </section>
 
     <section>
-        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+        <img src="./assets /timeline asset/1950/1950s copy.jpeg">
       </section>
       <section>
-        <img src="./assets /black&white/Luc Kordas.jpeg">
+        <img src="./assets /timeline asset/1950/1950s.jpeg">
       </section>
       <section id="1950">
-          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+          <img src="./assets /timeline asset/1950/1958.jpeg">
       </section>
         <section>
-          <img src="./assets /black&white/matt-weber-6.jpeg">
+          <img src="./assets /timeline asset/1950/Avenue-of-the-americas.jpeg">
       </section>
       <section>
-          <img src="./assets /black&white/matt_weber-7.jpeg">
+          <img src="./assets /timeline asset/1950/Jersey City to Manhattan ferry 1950.jpeg">
       </section>
-
-
-    <section><a href="#home">
-        <p>1960s</p></a>
+      <section>
+        <img src="./assets /timeline asset/1950/lower-east-side-1950s.jpeg">
     </section>
     <section>
-      
-        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+        <img src="./assets /timeline asset/1950/Matt-Weber-1.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/matt_weber-7.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/matt_weber-8.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/matt_weber-9.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/Vivian-Maier-1950s.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/Vivian-Maier-1954.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/Vivian-Maier-1955.jpeg">
+    </section>
+    <section>
+        <img src="./assets /timeline asset/1950/Vivian-Maier.jpeg">
+    </section>
+
+
+
+    <section class="part2"><a href="#home">
+        <p>1960s</p></a>
+    </section>
+    <section class="part2">
+        <img src="./assets /timeline asset/1960/1964.jpeg">
       </section>
-      <section>
-      
-        <img src="./assets /black&white/Luc Kordas.jpeg">
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Bruce-Davidson.jpeg">
       </section>
-      <section id="1960">
-      
-          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      <section id="1960" class="part2">
+          <img src="./assets /timeline asset/1960/frank-horvat-new-york-city-3.jpeg">
       </section>
-        <section>
-          <img src="./assets /black&white/matt-weber-6.jpeg">
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Frank-horvat.jpeg">
       </section>
-      <section>
-          <img src="./assets /black&white/matt_weber-7.jpeg">
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Joey Meyerowtiz 1963.jpeg">
       </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Joey Meyerowtiz 1967.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/lP0nPojs.png">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/LXLnVuZY.png">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Matt-Weber-2.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Matt-Weber-3.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/matt-weber-6.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/matt_weber-3.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Michael stipe photo of patti smith.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Vivian-Maier-2.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Vivian-Maier-3.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Vivian-Maier-5.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/Vivian-Maier-4.jpeg">
+      </section>
+      <section class="part2">
+        <img src="assets /timeline asset/1960/Vivian-maier3.jpeg">
+      </section>
+      <section class="part2">
+        <img src="./assets /timeline asset/1960/william klein.jpeg">
+      </section>
+
 
       <section><a href="#home">
         <p>1970s</p></a>
     </section>
       <section>
       
-        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+        <img src="./assets /timeline asset/1970/--- copy.jpeg">
       </section>
       <section>
-      
-        <img src="./assets /black&white/Luc Kordas.jpeg">
+        <img src="./assets /timeline asset/1970/---.jpeg">
       </section>
       <section id="1970">
-      
-          <img src="./assets /black&white/Matt-Weber-2.jpeg">
-      </section>
-        <section>
-          <img src="./assets /black&white/matt-weber-6.jpeg">
+          <img src="./assets /timeline asset/1970/--.jpeg">
       </section>
       <section>
-          <img src="./assets /black&white/matt_weber-7.jpeg">
+        <img src="./assets /timeline asset/1970/1.jpeg">
       </section>
-      <section><a href="#home">
+      <section>
+        <img src="./assets /timeline asset/1970/1970s-2.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1970s-3.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1970s.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1971-2.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1971-3.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1971-4.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1971.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/1972.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/David_Godlis-Photoof-pattismith.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/e0c079f0030dbafd4ba02790893f89f6.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/hH10hapQ.png">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/Joey Meyerowtiz 1975 1.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/New York city 1970s.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/New-York-1971-Chinatown.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/New-York-1971-Greenwich-Village.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/New-York-City-1971-Amsterdam-Ave.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/robert-herman.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/rQVBMSKg.png">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/rXDfzv0E.png">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/USrjOO1s.png">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/Vivian-Maier-.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/Vivian-Maier1.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/Vivian-Maier2.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/wm6UwNCQ.png">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1970/YNlTdgLg.png">
+      </section>
+
+
+      <section class="part3"><a href="#home">
         <p>1980s</p></a>
-       
       </section>
-      <section>
-      
-        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/1980s 2.jpeg">
       </section>
-      <section>
-      
-        <img src="./assets /black&white/Luc Kordas.jpeg">
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/1980s copy.jpeg">
       </section>
-      <section id="1980">
-          <img src="./assets /black&white/Matt-Weber-2.jpeg">
+      <section id="1980" class="part3">
+          <img src="./assets /timeline asset/1980/1980s-2.jpeg">
+      </section >
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/1980s-3 copy.jpeg">
       </section>
-        <section>
-          <img src="./assets /black&white/matt-weber-6.jpeg">
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/1980s-3.jpeg">
       </section>
-      <section>
-          <img src="./assets /black&white/matt_weber-7.jpeg">
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/1980s.jpeg">
       </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/1982.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Bryant-Park.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/chinatown.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/frank-horvat-2.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/frank-horvat-3.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Jamel-Shabazz1980.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Jamel-Shabazz1988.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Luc Kordas.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Luc Kordas3.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Luc Kordasconey island.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Nguan.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/robert-herman-2.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/robert-herman-3.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/ssuzOQWw.png">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Vincent Pflieger.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Vincent Pflieger chinatown.jpeg">
+      </section>
+      <section class="part3">
+        <img src="./assets /timeline asset/1980/Vivian Maier 1.jpeg">
+      </section>
+
+
       <section><a href="#home">
         <p>1990s</p></a>
        
       </section>
       <section>
-      
-        <img src="./assets /black&white/David_Godlis-Photoof-pattismith.jpeg">
+        <img src="./assets /timeline asset/1990/1992.jpeg">
       </section>
       <section>
-      
-        <img src="./assets /black&white/Luc Kordas.jpeg">
+        <img src="./assets /timeline asset/1990/Bruce-Davidson-2.jpeg">
       </section>
+
       <section id="1990">
       
-          <img src="./assets /black&white/Matt-Weber-2.jpeg">
-      </section>
-        <section>
-          <img src="./assets /black&white/matt-weber-6.jpeg">
+          <img src="./assets /timeline asset/1990/Jonathan Higbee 2.jpeg">
       </section>
       <section>
-          <img src="./assets /black&white/matt_weber-7.jpeg">
+        <img src="./assets /timeline asset/1990/Jonathan Higbee 3.jpeg">
       </section>
-      
-  </main>
+      <section>
+        <img src="./assets /timeline asset/1990/Jonathan Higbee 4.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1990/Jonathan Higbee1.jpeg">
+      </section>
+      <section>
+        <img src="./assets /timeline asset/1990/matt_weber-5.jpeg">
+      </section>
+    </main>
+
   <script>
       const scrollContainer = document.querySelector("main");
 
@@ -224,6 +440,7 @@ scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
     scrollContainer.scrollLeft += evt.deltaY;
 });
+
   </script>
   </body>
 

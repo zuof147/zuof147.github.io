@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon"
-            href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
-            />
-        <title>Core 2: Interaction Project 3</title>
-        <meta name="author" content="Sophia Zuo" />
-
-        <style>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon"
+      href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+      />
+    <title>Core 2: Interaction Project 3</title>
+    <meta name="author" content="Sophia Zuo" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
     body {
         background-color: rgb(255, 255, 255);
+    }
+
+    h1 {
+      position: fixed;
+      top:0px;
+      right:10px;
+      font-family:questrial ;
+      font-size: 20px;
+
     }
     .filterDiv {
       float: left;
@@ -25,7 +35,7 @@
       text-align: center;
       margin: 20px;
       display: none;
-      font-family: sura;
+      font-family: playfair display;
       font-size:40px;
     }
     
@@ -62,26 +72,63 @@
       background-color: rgb(0, 0, 0);
       color: white;
     }
+
+    #orange:hover {
+      background-color:rgb(240, 171, 68);
+        transition: 0.5s ease;
+    }
+    
+    #yellow:hover {
+      background-color:rgb(238, 219, 109);
+      transition: 0.5s ease;}
+
+      #blue:hover {
+      background-color:rgb(79, 122, 187);
+      transition: 0.5s ease;}
+
+      #green:hover {
+      background-color:rgb(121, 170, 132);
+      transition: 0.5s ease;}
+
+      #bw:hover {
+      background-color:rgb(0, 0, 0);
+      color:white;
+      transition: 0.5s ease;}
+
+      #timeline1:hover {
+      background-color:rgb(0, 0, 0);
+      color:white;
+      transition: 0.5s ease;}
+
+      #info:hover {
+      background-color:rgb(0, 0, 0);
+      color:white;
+      transition: 0.5s ease;}
+
     </style>
-        <body>
+    <body>
 
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')"> All</button>
-                <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-                <button class="btn" onclick="filterSelection('timeline')">Time</button>
-            </div>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> All</button>
+        <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+        <button class="btn" onclick="filterSelection('timeline')">Time</button>
+        <button class="btn" onclick="filterSelection('about')">About</button>
+      </div>
 
-            <div class="container">
-                <a href="./orange/orange.html"><div class="filterDiv colors">Orange</div></a>
-                <a href="./yellow/yellow.html"><div class="filterDiv colors">Yellow</div></a>
-                <div class="filterDiv colors">Blue</div>
-                <div class="filterDiv colors">Green</div>
-                <div class="filterDiv colors">B&W</div>
-                <a href="./relationships/relationship.html"><div class="filterDiv citylife">Relationships</div></a>
-                <a href="./timeline/timeline1.html"><div class="filterDiv timeline">Timeline</div></a>
-            </div>
+      <div class="container">
+        <a href="./orange/orange.html"><div id="orange" class="filterDiv
+            colors">Orange</div></a>
+        <a href="./yellow/yellow.html"><div id="yellow" class="filterDiv colors">Yellow</div></a>
+        <a href="./blue/blue.html"><div id="blue" class="filterDiv colors">Blue</div></a>
+        <a href="./green/green.html"><div id="green"class="filterDiv colors">Green</div></a>
+        <a href="./B&W/bw.html"><div id="bw" class="filterDiv colors">B&W</div></a>
+        <a href="./timeline/timeline1.html"><div id="timeline1" class="filterDiv timeline">Timeline</div></a>
+        <a href="./info.html"><div id="info" class="filterDiv about">Info</div></a>
+      </div>
 
-            <script>
+<h1>The City's Observer</h1>
+
+      <script>
     filterSelection("all")
     function filterSelection(c) {
       var x, i;
@@ -124,8 +171,9 @@
         this.className += " active";
       });
     }
+
     </script>
-        </body>
-    </html>
+    </body>
+  </html>
 
 </body>
