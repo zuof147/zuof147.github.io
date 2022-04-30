@@ -17,10 +17,10 @@ const users = [{
 
 // STEP 2: DOM REFERENCES
 const usersContainerElement = document.querySelector('#users')
-const showUsersWithCreditInDollarsButtonElement = document.querySelector("button#map")
-const showAuthenticatedUsersButtonElement = document.querySelector('button#authenticated')
-const showUsersSortedByNameAscendingButtonElement = document.querySelector('button#sort-ascending')
-const showUsersSortedByNameDescendingButtonElement = document.querySelector('button#sort-descending')
+const showWeaponWithAttackInYuanButtonElement = document.querySelector("button#map")
+const showAttackMoreThan100ButtonElement = document.querySelector('button#filter')
+const showUsersSortedByAttackAscendingButtonElement = document.querySelector('button#sort-ascending')
+const showUsersSortedByAttackDescendingButtonElement = document.querySelector('button#sort-descending')
 
 // STEP 3: FUNCTIONS
 const createUserElement = (user) => {
@@ -31,14 +31,14 @@ const createUserElement = (user) => {
     const nameElement = document.createElement('p')
     nameElement.innerHTML = 'Name: ' + user.name
     // Create Authenticated Element
-    const authenticatedElement = document.createElement('p')
-    authenticatedElement.innerHTML = 'Discription: ' + user.authenticated
+    const descriptionElement = document.createElement('p')
+    descriptionElement.innerHTML = 'Discription: ' + user.description
     // Create Credit Element
-    const creditElement = document.createElement('p')
-    creditElement.innerHTML = 'Attack:' + user.attack
+    const attackElement = document.createElement('p')
+    attackElement.innerHTML = 'Attack:' + user.attack
     containerElement.appendChild(nameElement)
-    containerElement.appendChild(authenticatedElement)
-    containerElement.appendChild(creditElement)
+    containerElement.appendChild(descriptionElement)
+    containerElement.appendChild(attackElement)
     return containerElement
 }
 
@@ -55,20 +55,20 @@ const addUsers = (users) => {
 
 // STEP 4: APPLICATION
 // MAP
-const usersWithCreditInDollars = users.map((user) => {
-    const userWithCreditInDollars = {
+const usersWithAttackInYuan = users.map((user) => {
+    const userWithAttackInYuan = {
         name: user.name, 
-        credit: user.credit, 
-        authenticated: user.authenticated
+        attack: user.attack, 
+        description: user.description
     }
-    const creditInDollars = userWithCreditInDollars.credit / 100 
-    userWithCreditInDollars.credit = '$' + creditInDollars
-    return userWithCreditInDollars
+    const attackInYuan = userWithAttackInYuan.attack / 100 
+    userWithAttackInYuan.attack = '¥' + attackInYuan
+    return userWithAttackInYuan
 })
 
 // FILTER
-const authenticatedUsers = users.filter((user) => {
-    return user.authenticated
+const attackMoreThan100Users = users.filter((user) => {
+    return user.attack >= 100
 })
 
 // SORT 
@@ -85,27 +85,27 @@ const usersSortedByAttackAscending = users.sort((userA, userB) => {
 })
 
 
-usersSortedByNameDescending = usersSortedByAttackAscending.slice().reverse() 
+usersSortedByAttackDescending = usersSortedByAttackAscending.slice().reverse() 
 
 // SET EVENT LISTENERS
-showUsersWithCreditInDollarsButtonElement.addEventListener('click', () => {
+showWeaponWithAttackInYuanButtonElement.addEventListener('click', () => {
     removeUsers()
-    addUsers(usersWithCreditInDollars)
+    addUsers(usersWithAttackInYuan)
 })
 
-showAuthenticatedUsersButtonElement.addEventListener('click', () => {
+showAttackMoreThan100ButtonElement.addEventListener('click', () => {
     removeUsers()
-    addUsers(authenticatedUsers)
+    addUsers(attackMoreThan100Users)
 })
 
-showUsersSortedByNameAscendingButtonElement.addEventListener('click', () => {
+showUsersSortedByAttackAscendingButtonElement.addEventListener('click', () => {
     removeUsers()
     addUsers(usersSortedByAttackAscending)
 })
 
-showUsersSortedByNameDescendingButtonElement.addEventListener('click', () => {
+showUsersSortedByAttackDescendingButtonElement.addEventListener('click', () => {
     removeUsers()
-    addUsers(usersSortedByNameDescending)
+    addUsers(usersSortedByAttackDescending)
 })
 
 // START APP
