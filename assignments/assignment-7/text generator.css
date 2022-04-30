@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Tangerine:wght@700&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+  
+body, html {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    width: 100vw; 
+    max-width: 100vw;
+    height: 100vh; 
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+span {
+    font-size: 9vw;
+    font-family:'Tangerine', cursive;
+}
+
+span:hover {
+    filter:blur(5px);
+    transition: 1s ease;
+}
+#application {
+    opacity: 0;
+    width: 100%;
+    height: 100%; 
+    padding: 0rem 7vw;
+    font-size: 4vw;
+    line-height: 105px;
+}
+
+#application.loaded {
+    opacity: 1; 
+}
