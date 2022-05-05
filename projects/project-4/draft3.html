@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon"
+            href="https://cdn.glitch.com/fe86915d-5cdf-4640-a02e-5aafd92c5b5c%2Ftumblr_o2nhyqZex21ul5fqko1_1280.png?v=1631824001621"
+            />
+        <title>Core 2: Interaction / Workshop 4</title>
+        <meta
+            name="description"
+            content="A repository for information on the Core 2
+            Interaction Lab course."
+            />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
+            rel="stylesheet">
+        <meta name="author" content="Sophia Zuo" />
+    </head>
+    <style>
+        html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 48px;
+  color: #ffffff;
+  background-color: #000000;
+  background-blend-mode: overlay;
+  margin: 0;
+  display: flex;
+}
+
+div {
+    position:absolute;
+}
+
+
+#cursor {
+  background-color:pink;
+color:black;}
+
+.colors {
+  display: none;
+  position:absolute;
+  left:50px;
+        bottom:30px;
+            font-size:140px;
+            color:white;
+            font-family: 'Kavoon', cursive;
+}
+    </style>
+    <body>
+        <div id="cursor">Press Any Keys to Start</div>
+
+        <div class="colors" id="a">Active</div>
+        <div class="colors" id="b">Brave</div>
+        <div class="colors" id="c">Calm</div>
+        <div class="colors" id="d">Dynamic</div>
+        <div class="colors" id="e">Earnest</div>
+        <div class="colors" id="f">Fast</div>
+        <div class="colors" id="g">Glamorous</div>
+        <div class="colors" id="h">Hungry</div>
+        <div class="colors" id="i">Ideal</div>
+        <div class="colors" id="j">Joyful</div>
+        <div class="colors" id="k">Keen</div>
+        <div class="colors" id="l">Lovely</div>
+        <div class="colors" id="m">Majestic</div>
+        <div class="colors" id="n">Naive</div>
+        <div class="colors" id="o">Oafish</div>
+        <div class="colors" id="p">Patient</div>
+        <div class="colors" id="q">Quick</div>
+        <div class="colors" id="r">Radiant</div>
+        <div class="colors" id="s">Smart</div>
+        <div class="colors" id="t">Talented</div>
+        <div class="colors" id="u">Usual</div>
+        <div class="colors" id="v">Variable</div>
+        <div class="colors" id="w">Wild</div>
+        <div class="colors" id="x">Xenial</div>
+        <div class="colors" id="y">Youthful</div>
+        <div class="colors" id="z">Zealous</div>
+
+
+        <script>
+var bgcolors = ["red", "pink", "#FE4F8F ", "purple", "#69E0E0", "#F0C7DC", "#FBE2EB", "#E32F70", "#D3175C", "#EF7BA5", "#A6CEEF", "#3A93DA", "#94C2E7", "#A4E794", "#50CD33", "#B3E7A7", "#9CFC86", "#58B543", "#F3E83C", "#F9F28A", "#F8D5D1", "#EE7F71", "#9AB7FD", "#F2E2EB", "#E9E955", "#F9F914"]
+var letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var bgimg = ["url()", "url(img/2.png)", "url(img/3.png)", "url(img/4.png)", "url(img/5.png)", "url(img/6.png)", "url(img/7.png)", "url(img/8.png)", "url(img/9.png)", "url(img/10.png)", "url(img/11.png)", "url(img/12.png)", "url(img/13.png)", "url(img/14.png)", "url(img/15.png)", "url(img/16.png)", "url(img/17.png)", "url(img/18.png)", "url(img/19.png)", "url(img/20.png)", "url(img/21.png)", "url(img/22.png)", "url(img/23.png)", "url(img/24.png)", "url(img/25.png)", "url(img/26.png)"];
+
+document.onkeydown = function (e) {
+  console.log("key down", event);
+
+  document.querySelectorAll(".colors").forEach(a => {
+    a.style.display = "none";
+  })
+  document.body.style.backgroundColor = "pink";
+  cursor.style.display = "block";
+  var randomIndex = Math.floor(Math.random() * bgcolors.length);
+  if (e.key == " ") { return };
+  cursor.style.display = "none";
+  document.body.style.backgroundColor = bgcolors[e.keyCode - 65];
+  document.body.style.backgroundImage = bgimg[randomIndex];
+  if (e.key == "Enter") { 
+    document.getElementById(letter[randomIndex]).style.display = "block";
+    document.body.style.backgroundColor = bgcolors[randomIndex];
+  }
+  else {
+    document.getElementById(e.key).style.display = "block";
+  }
+}
+</script>
+    </body>
+</html>

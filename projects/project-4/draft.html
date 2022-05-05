@@ -27,11 +27,17 @@
             margin:0;
         }
         
-        img
-        {
-          margin-top:100px;
-          
+        #container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width:1400px;
+          height:700px;
         }
+
+       img {
+           width:500px;
+       }
         
         #text1 {
             position:absolute;
@@ -40,6 +46,7 @@
             font-size:40px;
             color:white;
             font-family: 'Kavoon', cursive;
+         
         }
 
         #text2 {
@@ -49,19 +56,238 @@
             font-size:140px;
             color:white;
             font-family: 'Kavoon', cursive;
+            
         }
 
+        button {
+            background-color: rgb(252, 128, 165);
+            position:relative;
+            border-radius:30px;
+            border:2px solid rgb(255, 255, 255);
+            font-size:20px;
+            color:white;
+            height:40px;
+            width:40px;
+            margin:0px;
+            align-items: center;
+        }
+     #q{
+         position:absolute;
+         top:30px;
+         left:50px;
+     }
+
+     #w{
+        position:absolute;
+         top:30px;
+         left:92px;
+     }
+     #e{
+        position:absolute;
+         top:30px;
+         left:134px;
+     }
+     #r{
+        position:absolute;
+         top:30px;
+         left:176px;
+     }
+     #t{
+        position:absolute;
+         top:30px;
+         left:218px;
+     }
+     #y{
+        position:absolute;
+         top:30px;
+         left:260px;
+     }
+     #u{
+        position:absolute;
+         top:30px;
+         left:302px;
+     }
+     #i{
+        position:absolute;
+         top:30px;
+         left:344px;
+     }
+        
+     #o{
+        position:absolute;
+         top:30px;
+         left:386px;
+     }
+
+     #p{
+        position:absolute;
+         top:30px;
+         left:428px;
+     }
+     #a{
+        position:absolute;
+         top:70px;
+         left:73px;
+     }
+     #s{
+        position:absolute;
+         top:70px;
+         left:115px;
+     }
+     #d{
+        position:absolute;
+         top:70px;
+         left:157px;
+     }
+     #f{
+        position:absolute;
+         top:70px;
+         left:199px;
+     }
+     #g{
+        position:absolute;
+         top:70px;
+         left:241px;
+     }
+     #h{
+        position:absolute;
+         top:70px;
+         left:283px;
+     }
+     #j{
+        position:absolute;
+         top:70px;
+         left:325px;
+     }
+     #k{
+        position:absolute;
+         top:70px;
+         left:367px;
+     }
+     #l{
+        position:absolute;
+         top:70px;
+         left:409px;
+     }
+        
+     #z{
+        position:absolute;
+         top:110px;
+         left:95px;
+     }
+     #x{
+        position:absolute;
+         top:110px;
+         left:137px;
+     }
+     #c{
+        position:absolute;
+         top:110px;
+         left:179px;
+     }
+     #v{
+        position:absolute;
+         top:110px;
+         left:221px;
+     }
+     #b{
+        position:absolute;
+         top:110px;
+         left:263px;
+     }
+     #n{
+        position:absolute;
+         top:110px;
+         left:305px;
+     }
+     #m{
+        position:absolute;
+         top:110px;
+         left:347px;
+     }
+   
+
+     
     </style>
     <body>
-        <center>
-            <img src="https://kirby.nintendo.com/assets/img/intro/kirby-star2.png">
-            
-        </center>
+        <div id="container">
+            <div id="keyboard"></div>
+            <div id="image"></div>
+            <div class="feedback" id="keyborad-feedback"></div>
+        
         <div id="text1">
             Star Kirby
         </div>
         <div id="text2">
             Quick
         </div>
+    </div>
+
+        <script>
+            //create button
+    var start = 97,
+    end = 122,
+    button;
+
+while (start <= end) {
+    button = document.createElement("button");
+    button.id = button.textContent = String.fromCharCode(start);
+    document.body.appendChild(button);
+    start += 1;
+}
+
+document.addEventListener("keypress", function onKeypress(evt) {
+    var element = document.getElementById(String.fromCharCode(evt.charCode || evt.char));
+
+    if (element) {
+        document.addEventListener("keyup", function onKeyup() {
+            document.removeEventListener("keyup", onKeyup);
+
+            element.style.backgroundColor = "";
+        }, false);
+
+        element.style.backgroundColor = "pink";
+    }
+}, false);
+
+//Image Switch
+const keyboardEventElement =document.querySelector('body')
+const keyboardFeedbackEventElement=document.querySelector('#keyborad-feedback')
+const keybaordEventContainerElement =document.querySelector('container')
+
+keyboardEventElement.addEventListener('keydown',(event)=>{
+    const feedbackElement = document.createElement('img')
+    feedbackElement.innerHTML = "Key Pressed:" + event .key
+
+    if(event.key === "q") {
+        const bKeyElement = document.querySelector("#image")
+        bKeyElement.innerHTML = "<img src=\"./assets/kirby_2.png\">";
+    }
+
+    if(event.key === "a") {
+        const bKeyElement = document.querySelector("#image")
+        bKeyElement.innerHTML = "<img src=\"./assets/waddledee.png\">";
+    }
+
+    if(event.key === "w") {
+        const bKeyElement = document.querySelector("#image")
+        bKeyElement.innerHTML = "<img src=\"./assets/elfilin.png\">";
+    
+    }
+    if(event.key === "e") {
+        const bKeyElement = document.querySelector("#image")
+        bKeyElement.innerHTML = "<img src=\"./assets/kirby_1.png\">";
+    }
+    if(event.key === "r") {
+        const bKeyElement = document.querySelector("#image")
+        bKeyElement.innerHTML = "<img src=\"./assets/kirby_3.png\">";
+    }
+    if(event.key === "s") {
+        const bKeyElement = document.querySelector("#image")
+        bKeyElement.innerHTML = "<img src=\"./assets/kirby_4.png\">";
+    }})
+
+
+        </script>
     </body>
 </html>
