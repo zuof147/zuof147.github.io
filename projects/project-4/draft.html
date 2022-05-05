@@ -282,12 +282,18 @@ keyboardEventElement.addEventListener('keydown',(event)=>{
         const bKeyElement = document.querySelector("#image")
         bKeyElement.innerHTML = "<img src=\"./assets/kirby_3.png\">";
     }
+
+    if (event.key === "a"){
+
+body.style.backgroundColor = '#88A2AA';
+}
+
     if(event.key === "s") {
         const bKeyElement = document.querySelector("#image")
         bKeyElement.innerHTML = "<img src=\"./assets/kirby_4.png\">";
     }})
 
-
+    
         </script>
     </body>
 </html>
