@@ -218,12 +218,37 @@
         <div id="text1">
             Star Kirby
         </div>
-        <div id="text2">
-            Quick
-        </div>
-    </div>
+        <div class="text2" id="A">Active</div>
+        <div class="text2" id="B">Brave</div>
+        <div class="text2" id="C">Calm</div>
+        <div class="text2" id="D">Dynamic</div>
+        <div class="text2" id="E">Earnest</div>
+        <div class="text2" id="F">Fast</div>
+        <div class="text2" id="G">Glamorous</div>
+        <div class="text2" id="H">Hungry</div>
+        <div class="text2" id="I">Ideal</div>
+        <div class="text2" id="J">Joyful</div>
+        <div class="text2" id="K">Keen</div>
+        <div class="text2" id="L">Lovely</div>
+        <div class="text2" id="M">Majestic</div>
+        <div class="text2" id="N">Naive</div>
+        <div class="text2" id="O">Oafish</div>
+        <div class="text2" id="P">Patient</div>
+        <div class="text2" id="Q">Quick</div>
+        <div class="text2" id="R">Radiant</div>
+        <div class="text2" id="S">Smart</div>
+        <div class="text2" id="T">Talented</div>
+        <div class="text2" id="U">Usual</div>
+        <div class="text2" id="V">Variable</div>
+        <div class="text2" id="W">Wild</div>
+        <div class="text2" id="X">Xenial</div>
+        <div class="text2" id="Y">Youthful</div>
+        <div class="text2" id="Z">Zealous</div>
 
-        <script>
+        <script> 
+            //text switch
+
+
             //create button
     var start = 97,
     end = 122,
@@ -283,17 +308,50 @@ keyboardEventElement.addEventListener('keydown',(event)=>{
         bKeyElement.innerHTML = "<img src=\"./assets/kirby_3.png\">";
     }
 
-    if (event.key === "a"){
-
-body.style.backgroundColor = '#88A2AA';
-}
 
     if(event.key === "s") {
         const bKeyElement = document.querySelector("#image")
         bKeyElement.innerHTML = "<img src=\"./assets/kirby_4.png\">";
     }})
 
-    
+
+
+//background color change
+    window.addEventListener('keydown', event => {
+  switch (event.keyCode) {
+      case 81: // q
+        setBackgroundColor('red');
+        break;
+      case 50: // w
+        setBackgroundColor('green');
+        break;
+      case 51: // 3
+        setBackgroundColor('blue');
+        break;
+      case 52: // 4
+        setBackgroundColor('yellow');
+        break;
+      case 53: // 5
+        setBackgroundColor('black');
+        break;
+      case 54: // 6
+        setBackgroundColor('white');
+        break;
+      case 55: // 7
+        setBackgroundColor('purple');
+        break;
+      case 56: // 8
+        setBackgroundColor('#333');
+  }
+});
+
+function setBackgroundColor(color) {
+    document
+      .querySelector('body')
+      .style
+      .backgroundColor = color;
+}
+
         </script>
     </body>
 </html>
