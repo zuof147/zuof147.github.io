@@ -20,7 +20,7 @@ document.addEventListener("keypress", function onKeypress(evt) {
       element.style.backgroundColor = "";
     }, false);
 
-    element.style.backgroundColor = "";
+    element.style.backgroundColor = "#FF85B3";
   }
 }, false);
 
@@ -46,7 +46,7 @@ document.addEventListener("keypress", function onKeypress(evt) {
       element.style.backgroundColor = "";
     }, false);
 
-    element.style.backgroundColor = "";
+    element.style.backgroundColor = "#FF85B3";
   }
 }, false);
 
