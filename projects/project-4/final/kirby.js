@@ -313,7 +313,7 @@ function setBackgroundColor(color) {
     .backgroundColor = color;
 }
 
-//add audios
+//add audio
 document.getElementById('audio1').play();
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 49) {
@@ -383,3 +383,4 @@ document.addEventListener('keydown', function (e) {
     document.getElementById('audio0').play();
   }
 });
+
