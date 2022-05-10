@@ -314,70 +314,70 @@ function setBackgroundColor(color) {
 }
 
 //add audio
-document.getElementById('audio1').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 49) {
     document.getElementById('audio1').play();
   }
 })
 
-document.getElementById('audio2').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 50) {
     document.getElementById('audio2').play();
   }
 })
 
-document.getElementById('audio3').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 51) {
     document.getElementById('audio3').play();
   }
 });
 
-document.getElementById('audio4').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 52) {
     document.getElementById('audio4').play();
   }
 });
 
-document.getElementById('audio5').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 53) {
     document.getElementById('audio5').play();
   }
 });
 
-document.getElementById('audio6').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 54) {
     document.getElementById('audio6').play();
   }
 });
 
-document.getElementById('audio7').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 55) {
     document.getElementById('audio7').play();
   }
 });
 
-document.getElementById('audio8').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 56) {
     document.getElementById('audio5').play();
   }
 });
 
-document.getElementById('audio9').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 57) {
     document.getElementById('audio9').play();
   }
 });
 
-document.getElementById('audio0').play();
+
 document.addEventListener('keydown', function (e) {
   if (e.keyCode == 48) {
     document.getElementById('audio0').play();
