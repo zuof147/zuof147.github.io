@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Mali:wght@300&family=Press+Start+2P&family=Source+Code+Pro:wght@200&display=swap");
+
+.bgcolor {
+  background-color:pink;
+}
+
+body {
+  margin: 20vh;
+  background: #FEFEEF;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 35px;
+}
+
+.txcolor {
+  color: rgb(248, 106, 201);
+}
+
+.question {
+  font-family: "Mali", cursive;
+  font-size: 25px;
+}
+
+.answer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: pink;
+  padding: 16px 16px;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+    color: rgb(24, 24, 141);
+  }
+
+  .answer {
+    background-color: rgb(151, 206, 224);
+  }
+}
+
+#position {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 16px 16px;
+  background: pink;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#columns {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#columns > p {
+  width: 500px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #FEFEEF;
+}
+
+a:link {
+    color:black;
+}
+
+a:visited {
+    color:black;
+}
