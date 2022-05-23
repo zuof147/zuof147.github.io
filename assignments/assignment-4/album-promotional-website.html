@@ -10,40 +10,45 @@
         <title>Assignment-4</title>
         <meta
             name="description"
-            content="A repository for information on the Core 2
-            Interaction Lab course."
+            content="An assignment for lab class."
             />
         <meta name="author" content="Sophia Zuo" />
-        <link rel="stylesheet" type="text/css" href="./movie-poster.css">
+  
     </head>
 
     <style>
         body {
         background-color:rgb(147, 231, 213);
         }
+
+        @font-face {
+  font-family: myFirstFont;
+  src: url(./assets/K\ Gothic.ttf)
+}
+
+@font-face {
+  font-family: mySecondFont;
+  src: url(./assets/幻ノにじみ明朝.otf)
+}
+
         h1 {
             color: rgb(223, 8, 8);
             margin-top:250px;
             margin-left: 200px;
             font-size: 50px;
             position:absolute;
+            font-family: myFirstFont;
         }
         h2 {
             color: rgb(223, 8, 8);
             font-size: 30px;
             margin-top:350px;
             margin-left: 200px;
-            position:absolute
+            position:absolute;
+            font-family: mySecondFont;
         }
 
-        h3 {
-  font-family: freight;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  top: 0px;
-}
+      
 
 a {
   text-decoration: none;
@@ -79,12 +84,14 @@ div.button {
   position: fixed;
   left: -435px;
   transition: .7s ease;
+  font-family: mySecondFont;
+  text-align: right;
+  padding-right: 20px;
 }
 
 div.button:hover {
-
   position: fixed;
-  left: -50px;
+  left: -200px;
   width: 600px;
   border-radius: 30px;
 
@@ -100,6 +107,7 @@ img {
     margin-top: 100px;
     height:500px;
     position:absolute;
+    z-index: -1;
 }
     </style>
     <body>
@@ -128,15 +136,15 @@ img {
                 </div>
               </a>
 
-              <a href="">
+              <a href="./credits.html">
                 <div id="btn4" class="button">
                   <h3>Credits</h3>
                 </div>
               </a>
 
-              <a href="https://www.example.co.uk">
+              <a href="https://www.hmv.co.jp/artist_%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E_000000000117763/item_%E7%84%A1%E7%BD%AA%E3%83%A2%E3%83%A9%E3%83%88%E3%83%AA%E3%82%A2%E3%83%A0_751895">
                 <div id="btn5" class="button">
-                  <h3></h3>
+                <h3>Link to Buy</h3>
                 </div>
               </a>
      
